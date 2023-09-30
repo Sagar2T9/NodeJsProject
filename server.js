@@ -1,5 +1,12 @@
-const express= require("express");
+
+const express= require("express")
+const connectDb = require("./config/dbConnection")
+require("dotenv").config()
+
 const app=express()
+
+connectDb()
+
 const PORT= process.env.PORT || 5002
 
 //Importing the router
